@@ -25,7 +25,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -68,11 +67,24 @@ button:focus-visible {
 }
 
 /* Navigation bar styles */
-.navbar ul li {
+
+.navbar {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.navbar ul {
   list-style: none;
+  display: inline-flex; 
+  gap: 100px;
+}
+
+.navbar ul li {
+  margin: 0;
 }
 
 .navbar ul li a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
 }
