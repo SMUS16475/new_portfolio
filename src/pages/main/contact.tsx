@@ -1,9 +1,13 @@
 import React from 'react'
+import Navbar from '../../components/Navbar'
 
-const contact = () => {
+const Contact = () => {
   return (
-    <div>contact</div>
+    <>
+      <Navbar/>
+      <div>Contact</div>
+    </>
   )
 }
 
-export default contact
+export default Contact

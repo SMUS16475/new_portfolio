@@ -1,13 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import "../index.css"
 
 function Navbar() {
     return (
-        <nav>
+        <nav className="navbar">
             <ul>
-                <li><a href=""></a>Home</li>
-                <li><a href=""></a>Projects</li>
-                <li><a href=""></a>Resume</li>
-                <li><a href=""></a>Contact</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     )
