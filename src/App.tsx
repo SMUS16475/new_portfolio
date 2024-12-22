@@ -5,14 +5,12 @@ import viteLogo from '../public/vite.svg'
 import './App.css'
 
 import Home from "./pages/main/home"
-import Projects from "./pages/main/projects"
+import Projects from "./pages/main/projects/projects"
 import Contact from "./pages/main/contact"
 import Resume from "./pages/main/resume"
 import PageNotFound from './pages/404'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <BrowserRouter>
       <Routes>
