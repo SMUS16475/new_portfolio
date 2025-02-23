@@ -11,7 +11,7 @@ import Resume from "./pages/main/resume"
 import PageNotFound from './pages/404'
 import InDevelopment from './pages/dev'
 
-const IN_DEVELOPMENT = true
+const IN_DEVELOPMENT = false; // Set to true when in development
 
 function App() {
   return (
