@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '../public/vite.svg'
 import './App.css'
@@ -9,18 +9,27 @@ import Projects from "./pages/main/projects/projects"
 import Contact from "./pages/main/contact"
 import Resume from "./pages/main/resume"
 import PageNotFound from './pages/404'
+import InDevelopment from './pages/dev'
+
+const IN_DEVELOPMENT = true
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/projects" element={<Projects />}/>
-        <Route path="/resume" element={<Resume />}/>
-        <Route path="/contact" element={<Contact />}/>
-        <Route path="/*" element={<PageNotFound />}/>
+        {IN_DEVELOPMENT ? (
+          <Route path="*" element={<InDevelopment />}/>
+        ) : (
+          <>
+            <Route path="/" element={<Home />}/>
+            <Route path="/projects" element={<Projects />}/>
+            <Route path="/resume" element={<Resume />}/>
+            <Route path="/contact" element={<Contact />}/>
+            <Route path="/*" element={<PageNotFound />}/>
+          </>
+        )}
       </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 

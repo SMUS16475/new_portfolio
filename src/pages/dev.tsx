@@ -1,6 +1,6 @@
 import React from 'react'
 
-const dev = () => {
+const InDevelopment = () => {
   return (
     <>
         <h1>In Development</h1>
@@ -9,4 +9,4 @@ const dev = () => {
   )
 }
 
-export default dev
+export default InDevelopment
